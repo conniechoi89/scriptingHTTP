@@ -9,10 +9,9 @@ function getAndPrintHTMLChunks () {
 
     let responseBodyString = '';
 
-    response.on('data', function (data) {
+    response.on('data', function (Chunk) {
       console.log('\n');
-      responseBodyString += data;
-      console.log('Chunk Received. Length:', data.length);
+      responseBodyString += chunk;
     });
   });
 }
